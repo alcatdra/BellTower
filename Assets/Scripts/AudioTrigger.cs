@@ -8,11 +8,11 @@ public class AudioTrigger : MonoBehaviour
     public AudioSource audioSource;
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.name == "audio collider")
-        {
+        //if (collision.gameObject.name == "audio collider")
+       // {
         audioSource.PlayOneShot(audioSource.clip, volumeBasedOnMagnitude(collision));
-        Debug.Log(collision.relativeVelocity.magnitude);
-        }
+        Debug.Log(collision.gameObject.name);
+       // }
     } 
 
     float volumeBasedOnMagnitude(Collision collision)
